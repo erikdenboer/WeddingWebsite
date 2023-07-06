@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <!-- Page header/metadata -->
-    <head>
+    <header>
         <!-- Code will be exclusively in ASCII so using UTF-8 -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,29 +9,23 @@
         <!-- CSS file name -->
         <link rel="stylesheet" href="style.css">
 
-        <!-- Website title -->
+        <!-- Website title and background-->
         <title>E & Z are getting hitched!</title>
-    </head>
-    <!-- Visible page content -->
+        
+    </header>
+
     <body>
-        <!-- Main page header -->
-        <h1>Home</h1>
+        <div class="bg">
+            <div>
+                <img id="huntisover_white" src="images/huntisover_white.png" alt="The hunt is over!">
+            </div>
 
-        <!-- Some content -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut nisl sem. Integer aliquam volutpat ex, eget laoreet quam sodales condimentum. Vestibulum hendrerit pretium leo, in mollis arcu aliquet dictum. Curabitur ut magna venenatis, elementum nulla a, venenatis felis. Donec eros augue, dictum ac enim bibendum, vulputate ornare odio. Phasellus viverra odio nec finibus luctus. Cras tincidunt porta velit. Morbi non ornare ex. In molestie, nisl sagittis dictum interdum, felis elit aliquet urna, a blandit ante ante quis nisl. Pellentesque commodo justo in lobortis semper.
-        </p>
-        <!-- Random image because why not? -->
-        <img id=placeholder alt="Placeholder image" src="images/PH1.jpg"
+            <div>
+                <img id="logo_white" src="images/logo_white.png" alt="Wedding logo">
+            </div>
+        </div>
 
-        <!-- Adding our JavaScript in the script tag -->
-        <script>
-          // Identifying our image
-          const smiley = document.querySelector("#placeholder");
-  
-          // Adding reaction when image is clicked
-          smiley.addEventListener("click", () => {
-             alert(`Boromir says "Give me the ring!"`);
-          });
-        </script>
+        
+        
     </body>
 </html>
