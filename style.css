@@ -13,11 +13,30 @@ body, html {
     margin: 0;
 }
 
-#huntisover_white {
-    height: 70vh;
+#huntisover {
+    width: 40vw;
+    position: fixed;
+    left: 10vw;
+    top: 50vh;
 }
 
-#logo_white {
-    height: 25vh;
-    background: rgba(0,0,0,0.3);
+#saveourdate {
+    height: 16vh;
+    position: fixed;
+    left: 55vw;
+    top: 8vh;
+}
+
+#logo {
+    height: 20vh;
+    position: fixed;
+    left: 65vw;
+    top: 20vh;
+}
+
+#names {
+    height: 30vh;
+    position: fixed;
+    left: 60vw;
+    bottom: 25vh;
 }
