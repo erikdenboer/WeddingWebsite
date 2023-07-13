@@ -16,27 +16,61 @@ body, html {
 #huntisover {
     width: 40vw;
     position: fixed;
-    left: 10vw;
+    right: 55vw;
     top: 50vh;
 }
 
 #saveourdate {
-    height: 16vh;
+    width: 30vw;
     position: fixed;
     left: 55vw;
     top: 8vh;
 }
 
 #logo {
-    height: 20vh;
+    width: 12vw;
     position: fixed;
-    left: 65vw;
+    left: 64vw;
     top: 20vh;
 }
 
 #names {
-    height: 30vh;
+    width: 30vw;
     position: fixed;
-    left: 60vw;
+    left: 55vw;
     bottom: 25vh;
+}
+
+@media (max-width: 500px) {
+    .bg {
+        background-size: 150vw;
+    }
+
+    #huntisover {
+        width: 100vw;
+        position: fixed;
+        right: 0;
+        top: 2vh;
+    }
+    
+    #saveourdate {
+        width: 90vw;
+        position: fixed;
+        left: 5vw;
+        top: 80vh;
+    }
+    
+    #logo {
+        width: 40vw;
+        position: fixed;
+        left: 55vw;
+        top: 20vh;
+    }
+    
+    #names {
+        width: 40vw;
+        position: fixed;
+        left: 55vw;
+        bottom: 40vh;
+    }
 }
