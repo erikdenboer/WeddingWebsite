@@ -28,9 +28,9 @@ body, html {
 }
 
 #logo {
-    width: 12vw;
+    width: 14vw;
     position: fixed;
-    left: 64vw;
+    left: 63vw;
     top: 20vh;
 }
 
@@ -38,10 +38,10 @@ body, html {
     width: 30vw;
     position: fixed;
     left: 55vw;
-    bottom: 25vh;
+    bottom: 24vh;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .bg {
         background-size: 150vw;
     }
@@ -50,7 +50,7 @@ body, html {
         width: 100vw;
         position: fixed;
         right: 0;
-        top: 2vh;
+        top: 5vh;
     }
     
     #saveourdate {
