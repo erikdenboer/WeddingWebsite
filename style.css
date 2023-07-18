@@ -4,6 +4,23 @@ body, html {
     background-color: black;
 }
 
+p {
+    position: fixed;
+    right: 2vw;
+    bottom: 1vh;
+    color: aliceblue;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: aquamarine ;
+}
+
 .bg{
     background-image: url("images/SaveTheDate.jpg");
     background-size: contain;
@@ -44,6 +61,11 @@ body, html {
 @media (max-width: 480px) {
     .bg {
         background-size: 150vw;
+        background-image: url("images/SaveTheDate_LQ.jpg");
+    }
+
+    p {
+        font-size: smaller;
     }
 
     #huntisover {
@@ -71,6 +93,6 @@ body, html {
         width: 40vw;
         position: fixed;
         left: 55vw;
-        bottom: 40vh;
+        top: 45vh;
     }
 }
