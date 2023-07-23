@@ -1,0 +1,98 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+p {
+    position: fixed;
+    right: 2vw;
+    bottom: 1vh;
+    color: aliceblue;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: aquamarine ;
+}
+
+.bg{
+    background-image: url("images/SaveTheDate.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#huntisover {
+    width: 40vw;
+    position: fixed;
+    right: 55vw;
+    top: 50vh;
+}
+
+#saveourdate {
+    width: 30vw;
+    position: fixed;
+    left: 55vw;
+    top: 8vh;
+}
+
+#logo {
+    width: 14vw;
+    position: fixed;
+    left: 63vw;
+    top: 20vh;
+}
+
+#names {
+    width: 30vw;
+    position: fixed;
+    left: 55vw;
+    bottom: 24vh;
+}
+
+@media (max-width: 480px) {
+    .bg {
+        background-size: 150vw;
+        background-image: url("images/SaveTheDate_LQ.jpg");
+    }
+
+    p {
+        font-size: x-small;
+    }
+
+    #huntisover {
+        width: 100vw;
+        position: fixed;
+        right: 0;
+        top: 5vh;
+    }
+    
+    #saveourdate {
+        width: 90vw;
+        position: fixed;
+        left: 5vw;
+        top: 75vh;
+    }
+    
+    #logo {
+        width: 40vw;
+        position: fixed;
+        left: 55vw;
+        top: 20vh;
+    }
+    
+    #names {
+        width: 40vw;
+        position: fixed;
+        left: 55vw;
+        top: 45vh;
+    }
+}
