@@ -12,14 +12,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo $site_icon; ?>">
 </head>
 <body>
-	<div class="wrapper">
+	<div class="navbar">
 		<header>
-			<h1><?php echo $title; ?></h1>
 			<nav>
 				<ul>
-					<li><a href="about.php">About the wedding</a></li>
-					<li><a href="contact.php">Contact</a></li>
-					<li><a href="rsvp.php">RSVP</a></li>
+					<li <?php if($_SERVER['SCRIPT_NAME'] == "/index.php") {echo 'class="active"';}?>><a href="index.php">Home</a></li>
+					<li <?php if($_SERVER['SCRIPT_NAME'] == "/about.php") {echo 'class="active"';}?>><a href="about.php">About the wedding</a></li>
+					<li <?php if($_SERVER['SCRIPT_NAME'] == "/contact.php") {echo 'class="active"';}?>><a href="contact.php">Contact</a></li>
+					<li <?php if($_SERVER['SCRIPT_NAME'] == "/rsvp.php") {echo 'class="active"';}?>><a href="rsvp.php">RSVP</a></li>
 				</ul>
 			</nav>
 		</header>

@@ -13,10 +13,10 @@ function RSVPpassword() {
         $password = $_POST['password'];
         if ($password === 'your_password_here') {
             // Password is correct, perform login logic here
-            return 'Login successful';
+            return 'Login successful!';
         } else {
             // Password is incorrect, show error message
-            return 'Incorrect password';
+            return 'Incorrect password. Are you sure you\'re invited?';
         }
     }
     
