@@ -6,5 +6,6 @@
             <p>Hello world! This is the info page for our wedding!</p>
         </main>
 	</div>
-<!--Main Content Start -->
+    
+<!--Main Content End -->
 <?php include('templates/footer.php');?>

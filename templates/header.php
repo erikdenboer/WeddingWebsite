@@ -1,3 +1,5 @@
+<!-- Define header for all pages -->
+
 <?php require_once('inc/variables.php'); ?>
 <?php require_once('inc/functions.php'); ?>
 <!doctype html>
@@ -11,6 +13,8 @@
     <link rel="icon" type="image/x-icon" href="<?php echo $site_icon; ?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo $site_icon; ?>">
 </head>
+
+<!-- Navigation menu bar including highlighting of active page -->
 <body>
 	<div class="navbar">
 		<header>
@@ -20,6 +24,9 @@
 					<li <?php if($_SERVER['SCRIPT_NAME'] == "/about.php") {echo 'class="active"';}?>><a href="about.php">About the wedding</a></li>
 					<li <?php if($_SERVER['SCRIPT_NAME'] == "/contact.php") {echo 'class="active"';}?>><a href="contact.php">Contact</a></li>
 					<li <?php if($_SERVER['SCRIPT_NAME'] == "/rsvp.php") {echo 'class="active"';}?>><a href="rsvp.php">RSVP</a></li>
+					<li <?php if($_SERVER['SCRIPT_NAME'] == "/login.php") {echo 'class="active"';}?>><a href="login.php">Login</a></li>
 				</ul>
 			</nav>
 		</header>
+
+		<!-- End of header -->

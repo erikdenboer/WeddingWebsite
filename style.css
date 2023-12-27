@@ -18,15 +18,25 @@ p {
     position: relative;
 }
 
+.bg{
+    background-image: url("images/SaveTheDate.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+}
+
 .navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 5%;
+    width: 150px;
     background-color: #e3ae01;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    text-align: center;
 }
 
 .navbar li a {
@@ -44,14 +54,10 @@ p {
     color: white;
   }
 
-.bg{
-    background-image: url("images/SaveTheDate.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    margin: 0;
-}
+.RSVPform {
+    color: #e3ae01;
+    padding-left: 5%;
+  }
 
 #credits {
     position: fixed;
