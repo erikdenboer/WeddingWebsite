@@ -14,6 +14,23 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo $site_icon; ?>">
 </head>
 
+<?php
+	//Check whether user is logged in. If not, send to login page, or exit loop if already there.
+	session_start();
+	if($_SESSION['sid'] == session_id()){
+			echo "<a href='logout.php'>Logout</a>";
+	}
+	else{
+			if($_SERVER['SCRIPT_NAME'] == "/login.php"){
+				return;
+			}  
+			else
+			{
+				header("location:login.php");
+			}
+	}	
+?>
+
 <!-- Navigation menu bar including highlighting of active page -->
 <body>
 	<div class="navbar">

@@ -9,9 +9,26 @@
             </p>
             <form method="post" class="RSVPform">
             <!-- Create RSVP form -->
-            <!-- Questions to ask: Name (for seating chart), number food preference, info/comments, email for confirmation -->
+            <!-- Questions to ask: Name (for seating chart), number of guests, food preference, info/comments, email for confirmation -->
                 <label for="guest">Name:</label>
                 <input type="text" id="guest" name="guest" placeholder="Zaneera den Boer" required autofocus>
+                <br><br>
+
+                <label for="rsvp">Will you be joining us?</label>
+                <select id="rsvp" name="rsvp" required>
+                    <option value="yes">Yes, I/we will be there!</option>
+                    <option value="no">Sorry, I/we can't make it :(</option>
+                </select>
+                <br><br>
+
+                <label for="groupsize">With how many people?</label>
+                <select id="groupsize" name="groupsize" required>
+                    <option value="none">0</option>
+                    <option value="one">1</option>
+                    <option value="duo">2</option>
+                    <option value="trio">3</option>
+                    <option value="toomany">4 or more</option>
+                </select>
                 <br><br>
 
                 <label for="food">What would you like to eat?</label>
