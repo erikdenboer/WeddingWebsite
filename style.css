@@ -53,12 +53,12 @@ p {
 .navbar .active {
     background-color: purple;
     color: white;
-  }
+}
 
 .RSVPform {
     color: #e3ae01;
     padding-left: 5%;
-  }
+}
 
 #credits {
     position: fixed;
