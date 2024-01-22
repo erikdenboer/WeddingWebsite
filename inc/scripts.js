@@ -22,12 +22,14 @@ function didTheySayYes() {
     }
     switch (Number(x)) {
     case 0:                                                                         //Response to 'not joining'
-        let none = document.createElement('div');
-        none.id = 'rsvp_no';
-        none.className = 'RSVPyesorno';
-        document.getElementById('rsvp').insertAdjacentElement('afterend', none);
-        none.innerHTML = "<br> Shame you won't be joining us :( <br>";
-        break
+        let name1 = document.createElement('div');
+        name1.id = 'rsvp_no';
+        name1.className = 'RSVPyesorno';
+        document.getElementById('rsvp').insertAdjacentElement('afterend', name1);
+        name1.innerHTML = `We're sorry you won't be there!
+        <br><label for="name1">Name:</label>
+        <input type="text" id="name1" name="name1" placeholder="Zaneera den Boer" required>`;
+        break;
     case 1:                                                                         //Response to 'will join'
         let some = document.createElement('div');
         some.className = 'RSVPyesorno';
@@ -40,10 +42,10 @@ function didTheySayYes() {
                             <option value="gs3">3</option>
                             <option value="gs4">4 or more</option>
                         </select>`;                        
-        break
+        break;
     default:
         alert('Error! Please refresh the page and try again, and if you keep having issues, contact the groom.');
-        break
+        break;
     }
 }
 
@@ -80,22 +82,22 @@ function RSVPsize() {
         return
     }    
     else {
-    	x = Number(x.charAt(2));                            //Strip var name and convert to number for following steps;
+    	x = Number(x.charAt(2));                            //Strip var name and convert to number for following steps
         switch(x) {
         case 1: //Fallthrough for x = 1 || 2 || 3
         case 2: //Fallthrough for x = 1 || 2 || 3
         case 3:
-        	for (let i=0; i < x; i++) {
+        	for (let i=1; i <= x; i++) {
                 let namei = document.createElement('div');
                 namei.id = 'name' + i;
                 namei.className = 'RSVPquestion';
                 document.getElementById('groupsize').insertAdjacentElement('afterend', namei);
                 //First element appends to question 'groupsize', otherwise append after most recent foodi element
-                if (i == 0) {
+                if (i == 1) {
                     document.getElementById('groupsize').insertAdjacentElement('afterend', namei);
                 }
                 else {
-                    let y = i - 1;
+                    y = i-1;
                     y = 'food' + y;
                     document.getElementById(y).insertAdjacentElement('afterend', namei);
                 }
@@ -109,18 +111,17 @@ function RSVPsize() {
             let comments = document.createElement('div');
             comments.id = 'comments';
             comments.className = 'RSVPquestion';
-            let y = x - 1;
-            document.getElementById('food' + y).insertAdjacentElement('afterend', comments);
+            document.getElementById('food' + x).insertAdjacentElement('afterend', comments);
             document.getElementById('comments').innerHTML = 
             `<br><textarea name="message" id="message" cols=50 rows=3 
             placeholder="Please let us know if you have any allergy info or other dietary requests and we'll do our best to accommodate you!"></textarea>`;
-        break
+        break;
         case 4:
             alert('Too damn many!!!'); //Some kind of error message? 'Please check with bride or groom'?
-        break
+        break;
         default:
         	alert('Error! Please refresh the page and try again, and if you keep having issues, contact the groom.')
-        break
+        break;
         }
     }
 }

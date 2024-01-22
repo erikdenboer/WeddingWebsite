@@ -7,7 +7,7 @@
             Hello guests! This is the RSVP page for our wedding! 
             Here, you can let us know whether you'll be there to celebrate with us, how many guests you'll bring and what you'd like for dinner.
             </p>
-            <form method="post" class="RSVPform">
+            <form method="post" class="RSVPform" action="action_page.php">
             <!-- Create RSVP form -->
             <!-- Questions to ask: number of guests, name, food preference, info/comments, email for confirmation -->
                 <div>
