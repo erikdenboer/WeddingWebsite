@@ -1,4 +1,4 @@
-<?php include('templates/header.php')?>
+<?php include('inc/header.php')?>
 
 <!--Main Content Start -->
 
@@ -14,4 +14,4 @@ if($password == 'Shackled forever!')
 ?>
     
 <!--Main Content End -->
-<?php include('templates/footer.php');?>
+<?php include('inc/footer.php');?>

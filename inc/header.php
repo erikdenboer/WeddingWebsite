@@ -1,7 +1,11 @@
 <!-- Define header for all pages -->
 
-<?php require_once('inc/variables.php'); ?>
-<?php require_once('inc/functions.php'); ?>
+<?php require_once('variables.php');
+	  require_once('functions.php');
+	  //Enable PHPMailer
+	  require 'PHPMailer-master/src/Exception.php';
+	  require 'PHPMailer-master/src/PHPMailer.php';
+	  require 'PHPMailer-master/src/SMTP.php'; ?>
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -28,7 +32,14 @@
 			{
 				header("location:login.php");
 			}
-	}	
+	}
+	//Check whether RSVP form has just been posted successfully
+	if (isset($_SESSION['RSVP']) && $_SESSION['RSVP']) {
+		unset($_SESSION['RSVP']);
+		echo "<script type='text/javascript'>alert('RSVP received!')</script>";
+	 } else if (isset($_SESSION['RSVP']) && !$_SESSION['RSVP']) {
+		echo "<script type='text/javascript'>alert('It seems something went wrong! Please contact the groom to check.')</script>";
+	 }
 ?>
 
 <!-- Navigation menu bar including highlighting of active page -->

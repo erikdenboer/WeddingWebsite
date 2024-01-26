@@ -1,4 +1,4 @@
-<?php include('templates/header.php')?>
+<?php include('inc/header.php')?>
 
 <!--Main Content Start -->
 		<main>
@@ -7,4 +7,4 @@
         </main>
 	</div>
 <!--Main Content Start -->
-<?php include('templates/footer.php');?>
+<?php include('inc/footer.php');?>
