@@ -1,8 +1,7 @@
-<?php include('inc/header.php')?>
+<?php 
+include('inc/header.php');
 
-<!--Main Content Start -->
-<?php
-
+//Connect to MySQL database
 $server = 'localhost';
 $user = 'eandftug_DM';
 $pw = 'Ens0rcelled';
@@ -26,7 +25,7 @@ if ($rsvp == 1){                //Set RSVP to yes/no instead of binary before se
 } else if ($rsvp == 0){
     $rsvp = 'No';
 }
-//Gather names and food choices in array
+//Gather replies. Only gather optional variables if they were actually set
 $names = array(mysqli_real_escape_string($conn, $_POST['name1']));
 $food = array(mysqli_real_escape_string($conn, $_POST['food1']));
 if ($_POST['name2'] && $_POST['food2']) {
@@ -37,8 +36,12 @@ if ($_POST['name3'] && $_POST['food3']) {
 	$names[2] = mysqli_real_escape_string($conn, $_POST['name3']);
     $food[2] = mysqli_real_escape_string($conn, $_POST['food3']);
 }
-$message = mysqli_real_escape_string($conn, $_POST['message']);
-$email = mysqli_real_escape_string($conn, $_POST['email']);
+if($_POST['message']) {
+    $message = mysqli_real_escape_string($conn, $_POST['message']);
+}
+if($_POST['email']){
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+}
 
 //echo 'Variables collected.<br><br>';
 //Loop through name/food combo's, creating one SQL request for each. If user RSVPs for multiple guests,
@@ -59,21 +62,22 @@ for ($i = 0; $i < count($sql); $i++) {
     }
 }
 
-//Compilation of confirmation email: to bride & groom as notification, and to guest if they enter their own email
-$subject = "Your RSVP to E&Z's wedding!";
-$mainmessage = "<h1>Your RSVP to E&Z's wedding!</h1>
-<p>Thanks for submitting your RSVP to us. This email is a confirmation that we've received it correctly. You entered the following values:</p>";
-$altmess = "Hello!";
-
-if ($email) {
-    echo 'Prepping email...';
-    sendmail_no($email, $names[0]);//, $subject, $mainmessage, $altmess);
-}
+//If email is entered, load all submitted variables into one single array for compiling of confirmation email body
+//Compilation of body for email is done in template file in inc directory
+//if ($email) {
+    //echo 'Preparing email...';
+    if($_POST['rsvp']){
+        include('inc/RSVP_yes.php');
+        sendmail_yes($email, $_POST['name1'], $body);
+    }
+    else {
+        include('inc/RSVP_no.php'); 
+        sendmail_no($email, $_POST['name1'], $body);
+    }
+//}
 
 //Close database connection and return to RSVP page
 mysqli_close($conn);
-//header('Location: rsvp.php');
-?>
-<!--Main Content End -->
-<?php include('inc/footer.php');?>
+header('Location: rsvp.php');
+include('inc/footer.php');?>
 <script src='inc/scripts.js'></script>

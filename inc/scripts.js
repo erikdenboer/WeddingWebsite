@@ -55,10 +55,10 @@ function food(i) {
     document.getElementById(foodX).innerHTML = 
     '<br><label for="' + foodX + `">What would you like to eat?</label>
     <select id="` + foodX + '" name="' + foodX + `" required>
-        <option value="meat">Meat</option>
-        <option value="fish">Fish</option>
-        <option value="veg">Vegetarian</option>
-        <option value="other">Other</option>
+        <option value="Meat">Meat</option>
+        <option value="Fish">Fish</option>
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="Other">Other - please specify below</option>
     </select>`;
     return;
 }
@@ -123,5 +123,14 @@ function RSVPsize() {
         	alert('Error! Please refresh the page and try again, and if you keep having issues, contact the groom.')
         break;
         }
+    }
+}
+
+function showpass() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
     }
 }

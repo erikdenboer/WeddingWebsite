@@ -11,7 +11,7 @@
             
             <h2>Wedding coordinator</h2>
             <p>Wedding planner Astrid is our professional wedding coordinator who is in charge of the programme during the day. 
-            If you have any requests please contact her by email: astrid@mooistemomentweddings.nl. Make sure to mention it concerns our wedding. 
+            If you have any requests, please contact her <a href="mailto:astrid@mooistemomentweddings.nl">by email</a>. Make sure to mention it concerns our wedding. 
             If anything comes up during the day, she's also your first point of contact.</p>
 
             <h2>Venue</h2>
