@@ -26,15 +26,15 @@ function didTheySayYes() {
         name1.id = 'rsvp_no';
         name1.className = 'RSVPyesorno';
         document.getElementById('rsvp').insertAdjacentElement('afterend', name1);
-        name1.innerHTML = `We're sorry you won't be there!
-        <br><label for="name1">Name:</label>
+        name1.innerHTML = `We're sorry you won't be there!<br>Heel jammer dat we je/jullie zullen moeten missen!
+        <br><label for="name1">Name/Naam:<br></label>
         <input type="text" id="name1" name="name1" placeholder="Zaneera den Boer" required>`;
         break;
     case 1:                                                                         //Response to 'will join'
         let some = document.createElement('div');
         some.className = 'RSVPyesorno';
         document.getElementById('rsvp').insertAdjacentElement('afterend', some);
-        some.innerHTML =`<br><label for="groupsize">With how many people?</label>
+        some.innerHTML =`<br><label for="groupsize">With how many people? Met hoeveel gasten?<br></label>
                         <select id="groupsize" name="groupsize" onchange="RSVPsize()" required>
                             <option value="null"></option>
                             <option value="gs1">1</option>
@@ -44,7 +44,8 @@ function didTheySayYes() {
                         </select>`;                        
         break;
     default:
-        alert('Error! Please refresh the page and try again, and if you keep having issues, contact the groom.');
+        alert('Error! Please refresh the page and try again, and if you keep having issues, contact the groom. \n' + 
+        'Sorry, er is iets fout gegaan! Probeer het nog eens of neem anders contact op met de bruidegom.');
         break;
     }
 }
@@ -53,12 +54,12 @@ function didTheySayYes() {
 function food(i) {
     let foodX = "food" + i;
     document.getElementById(foodX).innerHTML = 
-    '<br><label for="' + foodX + `">What would you like to eat?</label>
+    '<br><label for="' + foodX + `">What would you like to eat? Wat wil je graag eten?<br></label>
     <select id="` + foodX + '" name="' + foodX + `" required>
-        <option value="Meat">Meat</option>
-        <option value="Fish">Fish</option>
-        <option value="Vegetarian">Vegetarian</option>
-        <option value="Other">Other - please specify below</option>
+        <option value="Meat">Meat/vlees</option>
+        <option value="Fish">Fish/vis</option>
+        <option value="Vegetarian">Vegetarian/Vegetarisch</option>
+        <option value="Other">Other - please specify below/Iets anders - vul het commentaarveld in</option>
     </select>`;
     return;
 }
@@ -67,7 +68,7 @@ function food(i) {
 function guestname(i) {
     let nameX = "name" + i;
     document.getElementById(nameX).innerHTML = 
-    '<br><label for="' + nameX + '">Name:</label>' +
+    '<br><label for="' + nameX + '">Name/Naam:<br></label>' +
     '<input type="text" id="' + nameX + '" name="' + nameX + '" placeholder="Zaneera den Boer" required>';
     return;
 }
@@ -113,14 +114,17 @@ function RSVPsize() {
             comments.className = 'RSVPquestion';
             document.getElementById('food' + x).insertAdjacentElement('afterend', comments);
             document.getElementById('comments').innerHTML = 
-            `<br><textarea name="message" id="message" cols=50 rows=3 
-            placeholder="Please let us know if you have any allergy info or other dietary requests and we'll do our best to accommodate you!"></textarea>`;
+            `<br><textarea name="message" id="message" cols=50 rows=6 
+            placeholder="Please let us know if you have any allergy info or other dietary requests and we'll do our best to accommodate you! \n` +
+            `Laat ons hier weten of je allergieën hebt of andere dieetwensen, dan doen we onze best om hiermee rekening te houden!"></textarea>`;
         break;
         case 4:
-            alert('Too damn many!!!'); //Some kind of error message? 'Please check with bride or groom'?
+            alert("We're not expecting anyone to bring this many guests. Either correct your entry if you miss-clicked, or please check with the bride/groom that we have enough space. \n" +
+            "We verwachten niet dat iemand zo'n grote groep meeneemt. Als je verkeerd geklikt hebt, corrigeer dit dan even, en neem anders contact met ons op om er zeker van te zijn dat er genoeg plek is.");
         break;
         default:
-        	alert('Error! Please refresh the page and try again, and if you keep having issues, contact the groom.')
+        	alert('Error! Please refresh the page and try again, and if you keep having issues, contact the groom. \n' +
+            'Er is iets misgegaan! Ververs even de pagina en probeer het nogmaals. Blijf je problemen hebben, neem dan contact op met de bruidegom.')
         break;
         }
     }

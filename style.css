@@ -1,116 +1,84 @@
-body, html {
-    height: 100%;
+html{
     margin: 0;
-    background-color: black;
-    color: #e3ae01;
+    color: black;
+    background: white url(images/logo-colored-pink_25opacity.png) no-repeat fixed center;
+    background-size: contain;
 }
 
-a {
-    color: aliceblue;
+body{
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    max-width: 100vw;
+}
+
+a{
+    color: #f98d8a;
     text-decoration: none;
 }
 
-h1 {
-    color: aliceblue;
+h1{
+    color: #f98d8a;
 }
 
-p {
-    color: aliceblue;
-    position: relative;
+input#password{
+    max-width:200px;
+    
 }
 
-.bg{
-    background-image: url("images/SaveTheDate.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.navbar ul {
+ul{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 150px;
-    background-color: #e3ae01;
-    position: absolute;
-    bottom: 0%;
-    transform: translateY(-50%);
-    text-align: center;
 }
 
-.navbar li a {
-    display: block;
-}
-
-.navbar li a:hover {
-    text-decoration: underline;
-    color: #000000 ;
-    background-color: #04AA6D;
-}
-
-.navbar .active {
-    background-color: purple;
-    color: white;
-}
-
-.RSVPform {
-    color: #e3ae01;
+.en{
+    float: left;
+    text-align: right;
+    width: 40%;
     padding-left: 5%;
 }
 
-#credits {
+.nl{
+    float: right;
+    text-align: left;
+    width: 40%;
+    padding-right: 5%;
+    padding-left: 0%;
+}
+
+.universal{
+    display: inline-block;
+    width: 100%;
+    margin-right: auto;
+}
+
+#menu li{
+    display: inline;
+}
+
+#menu a{
+    padding: 10px;
+    border: 1px solid #f98d8a;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#menu a:hover{
+    background-color: #f98d8a;
+    color: white;
+}
+
+#copyright{
     position: fixed;
-    right: 2vw;
-    bottom: 1vh;
-    color: aliceblue;
+    right: 0px;
+    bottom: 0px;
+    color: #f98d8a;
+    padding: 1%;
+    border-left: 1px solid #f98d8a;
+    border-top: 1px solid #f98d8a;
 }
 
-#huntisover {
-    width: 40vw;
-    position: fixed;
-    right: 55vw;
-    top: 50vh;
-}
-
-#saveourdate {
-    width: 30vw;
-    position: fixed;
-    left: 55vw;
-    top: 8vh;
-}
-
-#logo {
-    width: 14vw;
-    position: fixed;
-    left: 63vw;
-    top: 20vh;
-}
-
-#names {
-    width: 30vw;
-    position: fixed;
-    left: 55vw;
-    bottom: 24vh;
-}
-
-header {
-    width: 5%;
-    top: 50vh;
-    background-color: #e3ae01;
-
-}
-
-footer {
-    position: fixed;
-    border: 1px solid white;
-    right: 0;
-    bottom: 0;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
+/*
 @media (max-width: 480px) {
     .bg {
         background-size: 150vw;
@@ -148,4 +116,4 @@ footer {
         left: 55vw;
         top: 45vh;
     }
-}
+}*/
