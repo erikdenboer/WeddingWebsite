@@ -4,7 +4,7 @@
 
 <?php
 $password = $_POST['password'];
-if($password == 'Shackled forever!')
+if($password == 'Shackled forever')
 {
     session_start();
     $_SESSION['sid']=session_id();

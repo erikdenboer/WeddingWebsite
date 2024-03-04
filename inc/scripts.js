@@ -9,6 +9,12 @@ To do:
  - Nest name() and food() into extraRSVP() to populate each div with its question
 */
 
+
+//Redirect to mobile subdomain if on mobile device
+if (screen.width <= 699) {
+    window.location = "http://m.eandzgethitched.com";
+}
+
 //Populate form or just express regrets?
 //First clean up all existing elements in classes 'RSVPyesorno' and 'RSVPquestion', then generate new elements as required by the answer
 function didTheySayYes() {
@@ -17,6 +23,12 @@ function didTheySayYes() {
     cleanup = document.getElementsByClassName('RSVPquestion');
     while (cleanup.length > 0) {cleanup[0].parentNode.removeChild(cleanup[0]);}
     let x = document.getElementById('rsvp').value;                                  //Extract answer value
+    const nodeMap = document.getElementById('rsvp').attributes;                                  //Extract answer value
+    let text = "";
+    for (let i = 0; i < nodeMap.length; i++) {
+        text += nodeMap[i].name + " = " + nodeMap[i].value + "<br>";
+    }
+    alert(text);
     if (x == 'null') {                                                              //Don't respond to empty option
         return
     }

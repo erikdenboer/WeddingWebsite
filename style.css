@@ -78,42 +78,32 @@ ul{
     border-top: 1px solid #f98d8a;
 }
 
-/*
-@media (max-width: 480px) {
-    .bg {
-        background-size: 150vw;
-        background-image: url("images/SaveTheDate_LQ.jpg");
-    }
 
-    #credits {
-        font-size: x-small;
-    }
 
-    #huntisover {
-        width: 100vw;
-        position: fixed;
-        right: 0;
-        top: 5vh;
-    }
-    
-    #saveourdate {
-        width: 90vw;
-        position: fixed;
-        left: 5vw;
-        top: 75vh;
-    }
-    
-    #logo {
-        width: 40vw;
-        position: fixed;
-        left: 55vw;
-        top: 20vh;
-    }
-    
-    #names {
-        width: 40vw;
-        position: fixed;
-        left: 55vw;
-        top: 45vh;
-    }
-}*/
+#huntisover{
+    width: 40vw;
+    position: fixed;
+    right: 55vw;
+    top: 50vh;
+}
+
+#logo{
+    width: 14vw;
+    position: fixed;
+    left: 63vw;
+    top: 20vh;
+}
+
+#names{
+    width: 30vw;
+    position: fixed;
+    left: 55vw;
+    bottom: 24vh;
+}
+
+#saveourdate{
+    width: 30vw;
+    position: fixed;
+    left: 55vw;
+    top: 8vh;
+}

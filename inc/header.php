@@ -10,7 +10,13 @@
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+	<?php 
+	if($_SERVER['SCRIPT_NAME'] == "/index.php") {
+		echo '<link rel="stylesheet" href="style_index.css">';
+	} else{
+		echo '<link rel="stylesheet" href="style.css">';
+	}
+	?>    
     <link rel="icon" type="image/x-icon" href="<?php echo $site_icon; ?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo $site_icon; ?>">
 </head>
@@ -48,4 +54,4 @@
 		</header>
 	</div>
 
-		<!-- End of header -->
+<!-- End of header -->

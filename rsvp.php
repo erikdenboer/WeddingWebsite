@@ -22,7 +22,7 @@
                 <select id="rsvp" name="rsvp" onchange="didTheySayYes()" required> <!-- Function didTheySayYes() triggers follow-up questions as needed -->
                     <option value="null"></option>
                     <option value="1">Yes, I/we will be there! - Ik ben/wij zijn van de partij!</option>
-                    <option value="0">Sorry, I/we can't make it... - Helaas, voor mij/ons lukt het helaas niet...</option>
+                    <option value="0">Sorry, I/we can't make it... - Voor mij/ons lukt het helaas niet...</option>
                 </select>
             </div>
             <div>
