@@ -1,16 +1,8 @@
 html{
     margin: 0;
     color: black;
-    background: white url(../images/logo-colored-pink_25opacity.png) no-repeat fixed center;
+    background: white url(images/logo-colored-pink_25opacity.png) no-repeat fixed center;
     background-size: contain;
-}
-
-body{
-    margin-top: 0;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    max-width: 100vw;
 }
 
 a{
@@ -18,42 +10,64 @@ a{
     text-decoration: none;
 }
 
+body{
+    margin-top: 0;
+    margin: auto;
+    text-align: center;
+    max-width: 90vw;
+}
+
 h1{
     color: #f98d8a;
 }
 
 input#password{
-    max-width:200px;
-    
+    max-width:200px;    
+}
+
+main{
+    position: relative;
+    top: 50px;
+    width: 90vw;
+    z-index: 0;
+}
+
+table{
+    margin: auto;
+}
+
+th{
+    min-width: 10%;
 }
 
 ul{
     list-style-type: none;
+    padding: 0;
 }
 
-.en{
-    float: left;
-    text-align: right;
-    width: 40%;
-    padding-left: 5%;
+.gatekeeper{
+    position: absolute;
+    width: 60vw;
+    top: 30vh;
+    left: 20vw;
 }
 
-.nl{
-    float: right;
-    text-align: left;
-    width: 40%;
-    padding-right: 5%;
-    padding-left: 0%;
+#copyright{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    color: #f98d8a;
+    background-color: white;
+    padding: 1%;
+    border-left: 1px solid #f98d8a;
+    border-top: 1px solid #f98d8a;
 }
 
-.universal{
-    display: inline-block;
-    width: 100%;
-    margin-right: auto;
-}
-
-#menu li{
-    display: inline;
+#menu{
+    z-index: 1;
+    position: fixed;
+    margin: auto;
+    top: 0;
 }
 
 #menu a{
@@ -68,12 +82,60 @@ ul{
     color: white;
 }
 
-#copyright{
-    position: fixed;
-    right: 0px;
-    bottom: 0px;
-    color: #f98d8a;
-    padding: 1%;
-    border-left: 1px solid #f98d8a;
-    border-top: 1px solid #f98d8a;
+#menu li{
+    display: inline;
+}
+
+#password{
+    width: 100%;
+}
+
+#planning{
+    margin: auto;
+}
+
+#RSVP_confirm{
+    width: 80%;
+    margin: auto;
+    padding-top: 10%;
+}
+
+#submit{
+    margin-bottom: 15%;
+}
+
+#home{
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+}
+
+#STD{
+    max-width: 100%;
+    margin: 0;
+    z-index: 0;
+}
+
+#THIO{
+    width: 50vw;
+    position: absolute;
+    top: 5vh;
+    right: 0;
+    z-index: 1;
+}
+
+#logo{
+    width: 30vw;
+    z-index: 1;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+}
+
+#names{
+    width: 35vw;
+    z-index: 1;
+    position: absolute;
+    top: 22vh;
+    right: 0;
 }

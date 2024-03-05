@@ -11,13 +11,11 @@ To do:
 
 //Populate form or just express regrets?
 //First clean up all existing elements in classes 'RSVPyesorno' and 'RSVPquestion', then generate new elements as required by the answer
-function didTheySayYes() {
+function didTheySayYes(x) {
     let cleanup = document.getElementsByClassName('RSVPyesorno');                   //Clean up form before repopulating
     while (cleanup.length > 0) {cleanup[0].parentNode.removeChild(cleanup[0]);}
     cleanup = document.getElementsByClassName('RSVPquestion');
     while (cleanup.length > 0) {cleanup[0].parentNode.removeChild(cleanup[0]);}
-    let x = document.getElementById('rsvp').value;                                  //Extract answer value
-    alert(x);
     if (x == 'null') {                                                              //Don't respond to empty option
         return
     }
@@ -114,7 +112,7 @@ function RSVPsize() {
             comments.className = 'RSVPquestion';
             document.getElementById('food' + x).insertAdjacentElement('afterend', comments);
             document.getElementById('comments').innerHTML = 
-            `<br><textarea name="message" id="message" cols=50 rows=3
+            `<br><textarea name="message" id="message" cols=40 rows=4
             placeholder="Laat ons hier weten of je allergieën hebt of andere dieetwensen, dan doen we onze best om hiermee rekening te houden!"></textarea>`;
         break;
         case 4:

@@ -8,9 +8,11 @@ if($password == "Shackled forever")
 {
     session_start();
     $_SESSION["sid"] = session_id();
-    if($_POST["lang"] == "dutch"){
+    if($_POST["lang"] == "nl"){
+        $_SESSION["lang"] = "nl";
         header("location:index_nl.php");
-    } else {
+    } elseif($_POST["lang"] == "en"){
+        $_SESSION["lang"] = "en";
         header("location:index_en.php");
     }
 } else{

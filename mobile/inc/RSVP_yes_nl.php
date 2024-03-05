@@ -6,13 +6,14 @@ $body1 =   '<table><tr><td>
             </td></tr></table>
             <h1>Your RSVP to E&Z\'s wedding!</h1>
             <p style="margin: auto;">Hello ' . $_POST['name1'] . ", <br>
-            We're looking forward to seeing you on our big day! This is what you entered in your RSVP:<br>";
+            We kijken ernaar uit je te zien op onze bruiloft! Hierbij de bevestiging van wat je aangegeven hebt:<br>";
 
 //Generate user-friendly list of their responses
 $email_vars = array(
-    'Name: ' . $names[0] . '<br>',
-    'RSVP: ' . $rsvp . '<br>',
-    'Email: ' . $email . '<br>');
+    'Naam: ' . $names[0] . '<br>',
+    'RSVP: ' . $rsvp . '<br>');
+//    'Email: ' . $email . '<br>'
+
 //Add optional values if set
 if($food[0]){
     $email_vars[] = 'Food preference: ' . $food[0] . '<br>';
@@ -31,8 +32,8 @@ if(isset($message)){
 $body2 = implode(" ", $email_vars);
 
 //Closing statement
-$body3 = "Thanks for RSVP'ing! <br><br>
-Love, Erik & Zaneera</p>
+$body3 = "Mocht je iets willen checken of veranderen, neem dan even contact op met de bruidegom. Bedankt voor je RSVP! <br><br>
+Liefs, Erik & Zaneera</p>
 ";
 
 //Compile parts into message body to be sent

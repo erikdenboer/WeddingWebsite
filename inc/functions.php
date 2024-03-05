@@ -4,11 +4,11 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Functions sorted alphabetically
-function sendmail_no($to,$nameto,$body) {//,$altmess
+function sendmail_no($to,$nameto,$body) {
     $from  = "noreply@eandzgethitched.com";
+    $namefrom = "Erik & Zaneera";
     $Z_mail = "zaneerasim@gmail.com";
     $E_mail = "erikdenboer92@gmail.com";
-    $namefrom = "Erik & Zaneera";
     $mail = new PHPMailer();
     $mail->SMTPDebug  = 0;
     $mail->CharSet    = 'UTF-8';
@@ -25,7 +25,7 @@ function sendmail_no($to,$nameto,$body) {//,$altmess
     $mail->Subject  = "Your RSVP to E&Z's wedding!";
     $mail->isHTML(true);
     $mail->MsgHTML($body);
-    //$mail->AltBody  = $altmess;
+    $mail->AltBody  = 'Your RSVP has been received and stored in our database successfully! Contact the groom if you want to change or check anything.';
     $mail->addAddress($to, $nameto);
     if($mail->send()) {
         echo 'Email sent successfully!';
@@ -34,11 +34,11 @@ function sendmail_no($to,$nameto,$body) {//,$altmess
     }
 }
   
-function sendmail_yes($to,$nameto,$body) {//,$altmess
+function sendmail_yes($to,$nameto,$body) {
     $from  = "noreply@eandzgethitched.com";
+    $namefrom = "Erik & Zaneera";
     $Z_mail = "zaneerasim@gmail.com";
     $E_mail = "erikdenboer92@gmail.com";
-    $namefrom = "Erik & Zaneera";
     $mail = new PHPMailer();
     $mail->SMTPDebug  = 0;
     $mail->CharSet    = 'UTF-8';
@@ -55,7 +55,7 @@ function sendmail_yes($to,$nameto,$body) {//,$altmess
     $mail->Subject  = "Your RSVP to E&Z's wedding!";
     $mail->isHTML(true);
     $mail->MsgHTML($body);
-    //$mail->AltBody  = $altmess;
+    $mail->AltBody  = 'Your RSVP has been received and stored in our database successfully! Contact the groom if you want to change or check anything.';
     $mail->addAddress($to, $nameto);
     if($mail->send()) {
         echo 'Email sent successfully!';

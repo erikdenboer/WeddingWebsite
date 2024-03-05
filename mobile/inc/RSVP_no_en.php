@@ -11,27 +11,12 @@ $body1 =   '<table><tr><td>
 //Generate user-friendly list of their responses
 $email_vars = array(
     'Name: ' . $names[0] . '<br>',
-    'RSVP: ' . $rsvp . '<br>',
-    'Email: ' . $email . '<br>');
-//Add optional values if set
-if($food[0]){
-    $email_vars[] = 'Food preference: ' . $food[0] . '<br>';
-}
-if($names[1] && $food[1]){
-    $email_vars[] = 'Name of guest 2: ' . $names[1] . '<br>';
-    $email_vars[] = 'Food preference of guest 2: ' . $food[1] . '<br>';
-}
-if($names[2] && $food[2]){
-    $email_vars[] = 'Name of guest 3: ' . $names[2] . '<br>';
-    $email_vars[] = 'Food preference of guest 3: ' . $food[2] . '<br>';
-}
-if(isset($message)){
-    $email_vars[] = 'Message: ' . $message . '<br><br>';
-}
+    'RSVP: ' . $rsvp . '<br>');
+//    'Email: ' . $email . '<br>'
 $body2 = implode(" ", $email_vars);
 
 //Closing statement
-$body3 = "Thanks for RSVP'ing! <br><br>
+$body3 = "Contact the groom if you want to change or check anything. Thanks for RSVP'ing! <br><br>
 Love, Erik & Zaneera</p>
 ";
 

@@ -42,15 +42,13 @@
 <!-- Navigation menu bar including highlighting of active page and login/logout button depending on session status of user -->
 	<div id="menu">
 		<header>
-			<nav>
-				<ul>
-					<li <?php if($_SERVER['SCRIPT_NAME'] == "/index.php") {echo 'class="active"';}?>><a href="index.php">Home</a></li>
-					<li <?php if($_SERVER['SCRIPT_NAME'] == "/about.php") {echo 'class="active"';}?>><a href="about.php">About the wedding</a></li>
-					<li <?php if($_SERVER['SCRIPT_NAME'] == "/contact.php") {echo 'class="active"';}?>><a href="contact.php">Contact</a></li>
-					<li <?php if($_SERVER['SCRIPT_NAME'] == "/rsvp.php") {echo 'class="active"';}?>><a href="rsvp.php">RSVP</a></li>
-					<?php if($_SESSION['sid'] == session_id()){echo '<li><a href="logout.php">Log out</a></li>';}?>
-				</ul>
-			</nav>
+			<ul>
+				<li <?php if($_SERVER['SCRIPT_NAME'] == "/index.php") {echo 'class="active"';}?>><a href="index.php">Home</a></li>
+				<li <?php if($_SERVER['SCRIPT_NAME'] == "/about.php") {echo 'class="active"';}?>><a href="about.php">About the wedding</a></li>
+				<li <?php if($_SERVER['SCRIPT_NAME'] == "/contact.php") {echo 'class="active"';}?>><a href="contact.php">Contact</a></li>
+				<li <?php if($_SERVER['SCRIPT_NAME'] == "/rsvp.php") {echo 'class="active"';}?>><a href="rsvp.php">RSVP</a></li>
+				<?php if($_SESSION['sid'] == session_id()){echo '<li><a href="logout.php">Log out</a></li>';}?>
+			</ul>
 		</header>
 	</div>
 

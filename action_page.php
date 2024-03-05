@@ -1,6 +1,5 @@
 <?php 
 include('inc/header.php');
-
 //Connect to MySQL database
 $server = 'localhost';
 $user = 'eandftug_DM';

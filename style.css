@@ -38,6 +38,13 @@ ul{
     padding-left: 5%;
 }
 
+.gatekeeper{
+    position: absolute;
+    width: 50vw;
+    top: 30vh;
+    left: 25vw;
+}
+
 .nl{
     float: right;
     text-align: left;
@@ -76,34 +83,4 @@ ul{
     padding: 1%;
     border-left: 1px solid #f98d8a;
     border-top: 1px solid #f98d8a;
-}
-
-
-
-#huntisover{
-    width: 40vw;
-    position: fixed;
-    right: 55vw;
-    top: 50vh;
-}
-
-#logo{
-    width: 14vw;
-    position: fixed;
-    left: 63vw;
-    top: 20vh;
-}
-
-#names{
-    width: 30vw;
-    position: fixed;
-    left: 55vw;
-    bottom: 24vh;
-}
-
-#saveourdate{
-    width: 30vw;
-    position: fixed;
-    left: 55vw;
-    top: 8vh;
 }

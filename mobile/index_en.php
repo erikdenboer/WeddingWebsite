@@ -1,18 +1,29 @@
 <?php include('inc/header.php')?>
 
 <!--Main Content Start -->
-<main>
+<main id="home">
 <!--Home start-->
-    <div id="home">
-        <!-- /used to add the background image, which is done in style.css rather than here -->
+    <div>
+        <div>
+            <img id="STD" src="images/homepage.jpg" alt="Photo of Z after catching E">
+        </div>
+        <div>
+            <img id="THIO" src="images/huntisover_white.png" alt="The hunt is over!">
+        </div>
+        <div>
+            <img id="logo" src="images/logo-white.png" alt="Wedding logo">
+        </div>
+        <div>
+            <img id="names" src="images/names_white.png" alt="Erik & Zaneera - 11.05.2024 - Leusden, NL">
+        </div>
     </div>
 <!--Home end-->
 
 <!--About start-->
-    <div id='about'>
+    <div id='info'>
         <h1>About the wedding</h1>
         <p>Hello dear guests! Here, you will find all manner of practical info about the wedding <!--couple, -->location and schedule. 
-        If you have any further questions, please head over to the <a href="contact.php">Contact page</a> to find out who to ask and how to reach them.
+        If you have any further questions, please head over to the <a href=#contact>Contact section</a> to find out who to ask and how to reach them.
         </p>
         
         <h3>RSVP</h3>
@@ -32,13 +43,13 @@
         <h3>Gift tip</h3>
         <p>We would love to go on a honeymoon later this year. You would make us very happy with a contribution to make this trip even more special.</p>
         
-        <h1>About the location</h1>
+        <h1>Venue</h1>
         <h3>Restaurant De Mof</h3>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.514704099919!2d5.412400776202065!3d52.1067631667427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c645065216741f%3A0x618b5b19dd95bbd7!2sRestaurant%20De%20Mof!5e0!3m2!1sen!2sde!4v1706651816697!5m2!1sen!2sde" 
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            max-width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             
         <h3>Recommended means of travel</h3>
-        <p>Restaurant De Mof is easy to reach by car, situated 5-10 minutes by car from the highway A12, exit 22 towards Maarsbergen. There is plenty of free parking available on the terrain,
+        <p>Restaurant De Mof is easy to reach by car, situated 5-10 minutes' drive from the highway A12, exit 22 towards Maarsbergen. There is plenty of free parking available on the terrain,
             making this one of the easiest ways of reaching the venue. It is also possible to come by train to Amersfoort Central Station and then transferring to bus 80 towards De Klomp/Leusden,
             which will drop you right outside the venue in about 20 minutes. However, note that the return bus runs only once an hour on Saturday evenings.
             For additional flexibility, or if you want a real taste of the Dutch way of life, it is possible to rent bikes at the train station, after which it's a 30-minute ride to the venue.
@@ -46,7 +57,7 @@
 
         <h3>Hotels nearby</h3>
         <p>For those wishing to stay the night nearby, there are several options:
-            <ul>
+            <ul class="text_uls">
                 <li><a href="https://www.hotelleusden.nl/">Van der Valk Hotel Amersfoort Leusden</a>
                 - a well-known Dutch hotel chain. The happy couple will spend the wedding weekend in one of their hotels, actually!</li>
                 <li><a href="https://www.fletcherhotelamersfoort.nl/en/">Fletcher Hotel-Restaurant Amersfoort</a>
@@ -58,12 +69,12 @@
             </ul>
             Unable to find something you like? Contact the groom, or just call Restaurant De Mof - they certainly know which places close by are worth checking out!</p>
 
-        <h1>About the schedule</h1>
+        <h1>Schedule</h1>
         <p>
         <!--Create table for the schedule: -->
             <table>
                 <tr>
-                    <th>Time</th>
+                    <th id="th1">Time</th>
                     <th>Activity</th>
                 </tr>
                 <tr>
@@ -87,7 +98,7 @@
     <div id='contact'>
         <h1>Contact</h1>
             <p>In case you have any questions before the wedding day, you can contact the bride or groom:
-                <ul>
+                <ul class="text_uls">
                     <li>Zaneera: +49 176 3746 8188</li>
                     <li>Erik: +49 172 169 9067</li>
                 </ul>
@@ -101,7 +112,7 @@
 <!--Contact end -->
 
 <!--RSVP start -->
-    <div id='rsvp'>
+    <div id='rsvp_form'>
         <h1>RSVP</h1>
         <p>Hello guests! This is the RSVP page for our wedding. 
             Here, you can let us know whether you'll be there to celebrate with us, how many guests you'll bring and what you'd like for dinner.
@@ -109,20 +120,19 @@
         <form method="post" class="RSVPform" action="action_page.php">
         <!-- Create RSVP form -->
         <!-- Questions to ask: number of guests, name, food preference, info/comments, email for confirmation -->
-            <div>
-                <label for="rsvp">Will you be joining us?</label>
-                <select id="rsvp" name="rsvp" onchange="didTheySayYes()" required> <!-- Function didTheySayYes() triggers follow-up questions as needed -->
-                    <option value="null"></option>
-                    <option value="1">Yes, I/we will be there!</option>
-                    <option value="0">Sorry, I/we can't make it...</option>
-                </select>
+            <div id="rsvp">
+                <label for="rsvp">Will you be joining us?</label><br>
+                <!-- Function didTheySayYes() triggers follow-up questions as needed -->
+                <input type="radio" name="rsvp" value="0" onchange=didTheySayYes(value) required>Sorry, I/we can't make it...</input><br>
+                <input type="radio" name="rsvp" value="1" onchange=didTheySayYes(value) required>Yes, I/we will be there!</input><br><br>
             </div>
+            
             <div>
-                <br>
+                <br><!-- Disabling email functionality (hopefully temporarily)
                 <label for="email">Enter your email address if you want receive a copy/confirmation of this form:<br></label>
                 <input type="email" id="email" name="email" placeholder="zaneera.den@boer.nl">
-                <br><br>
-                <input type="submit">
+                <br><br>-->
+                <input id="submit" type="submit">
             </div>
         </form>
     </div>

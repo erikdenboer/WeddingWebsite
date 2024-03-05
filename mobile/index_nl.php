@@ -1,18 +1,29 @@
 <?php include('inc/header.php')?>
 
 <!--Main Content Start -->
-<main>
+<main id="home">
 <!--Home start-->
-    <div id="home">
-        <!-- /used to add the background image, which is done in style.css rather than here -->
+    <div>
+        <div>
+            <img id="STD" src="images/homepage.jpg" alt="Foto van Z met haar prooi E">
+        </div>
+        <div>
+            <img id="THIO" src="images/huntisover_white.png" alt="The hunt is over!">
+        </div>
+        <div>
+            <img id="logo" src="images/logo-white.png" alt="Bruiloftslogo">
+        </div>
+        <div>
+            <img id="names" src="images/names_white.png" alt="Erik & Zaneera - 11.05.2024 - Leusden, NL">
+        </div>
     </div>
 <!--Home end-->
 
 <!--About start-->
-    <div id='about'>
+    <div id='info'>
         <h1>Info</h1>
         <p>Hallo lieve gasten! Hier kunnen jullie allerlei praktische informatie vinden over de bruiloft, zoals de locatie en planning. 
-            Mochten er toch nog vragen zijn, kijk even op de <a href="contact.php">Contactpagina</a> om te zien bij wie je het beste kunt zijn daarvoor.</p>
+            Mochten er toch nog vragen zijn, kijk even onder het kopje <a href=#contact>Contact</a> om te zien bij wie je het beste kunt zijn daarvoor.</p>
         
         <h3>RSVP</h3>
         <p>Laat ons alsjeblieft weten of je/jullie erbij kunnen zijn op onze grote dag! Geef dit door via de <a href=rsvp.php>RSVP-pagina</a> voor 31 maart, 
@@ -48,7 +59,7 @@
 
         <h3>Hotels in de buurt</h3>
         <p>Mocht je graag dichtbij overnachten, dan zijn er ook genoeg opties:
-            <ul>
+            <ul class="text_uls">
                 <li><a href="https://www.hotelleusden.nl/">Van der Valk Hotel Amersfoort Leusden</a></li>
                 <li><a href="https://www.fletcherhotelamersfoort.nl/en/">Fletcher Hotel-Restaurant Amersfoort</a></li>
                 <li><a href="https://www.europarcs.com/holiday-parks/the-netherlands/utrecht/de-utrechtse-heuvelrug">Europarcs De Utrechtse Heuvelrug</a></li>
@@ -87,7 +98,7 @@
     <div id='contact'>
         <h1>Contact</h1>
         <p>In geval van vragen voor de dag van de bruiloft, kun je een berichtje sturen naar de bruid of bruidegom:
-            <ul>
+            <ul class="text_uls">
                 <li>Zaneera: +49 176 3746 8188</li>
                 <li>Erik: +49 172 169 9067</li>
             </ul>
@@ -101,26 +112,25 @@
 <!--Contact end -->
 
 <!--RSVP start -->
-    <div id='rsvp'>
+    <div id='rsvp_form'>
         <h1>RSVP</h1>
         <p>Hallo gasten! Dit is de RSVP-pagina voor onze bruiloft. Hier kun je laten weten of je onze bruiloft mee komt vieren, met hoeveel je komt en wat je graag wil eten.</p>
         <form method="post" class="RSVPform" action="action_page.php">
         <!-- Create RSVP form -->
         <!-- Questions to ask: number of guests, name, food preference, info/comments, email for confirmation -->
-            <div>
-                <label for="rsvp">Ben je erbij?<br></label>
-                <select id="rsvp" name="rsvp" onchange="didTheySayYes()" required> <!-- Function didTheySayYes() triggers follow-up questions as needed -->
-                    <option value="null"></option>
-                    <option value="1">Ik ben/wij zijn van de partij!</option>
-                    <option value="0">Voor mij/ons lukt het helaas niet...</option>
-                </select>
+            <div id="rsvp">
+                <label for="rsvp">Ben je erbij?</label><br>
+                <!-- Function didTheySayYes() triggers follow-up questions as needed -->
+                <input type="radio" name="rsvp" value="0" onchange=didTheySayYes(value) required>Voor mij/ons lukt het helaas niet...</input><br>
+                <input type="radio" name="rsvp" value="1" onchange=didTheySayYes(value) required>Ik ben/wij zijn van de partij!</input><br><br>
             </div>
+            
             <div>
-                <br>
+                <br><!-- Disabling email functionality (hopefully temporarily)
                 <label for="email">Voer hier je emailadres in als je een kopie/bevestiging van het ingevulde formulier wilt ontvangen:<br></label>
                 <input type="email" id="email" name="email" placeholder="zaneera.den@boer.nl">
-                <br><br>
-                <input type="submit">
+                <br><br>-->
+                <input id="submit" type="submit">
             </div>
         </form>
     </div>

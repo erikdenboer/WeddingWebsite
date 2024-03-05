@@ -10,7 +10,13 @@
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <?php 
+	if($_SERVER['SCRIPT_NAME'] == "/index.php") {
+		echo '<link rel="stylesheet" href="style_rsvp.css">';
+	} else{
+		echo '<link rel="stylesheet" href="style.css">';
+	}
+	?>
     <link rel="icon" type="image/x-icon" href="<?php echo $site_icon; ?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo $site_icon; ?>">
 </head>
@@ -25,7 +31,7 @@
 			else {header("location:login.php");}
 	}
 	if($_SESSION['login_failed'] === 1){
-		if($_POST["lang"] === "Dutch"){
+		if($_POST["lang"] === "nl"){
 			echo "<script type='text/javascript'>
 			alert(Sorry, dat klopt niet helemaal. Weet je zeker dat je het exact zoals op de uitnodiging gespeld hebt? Als je deze melding blijft zien, neem dan contact op met de bruidegom.
 			</script>";
@@ -41,24 +47,22 @@
 	//Check whether RSVP form has just been posted successfully
 	if (isset($_SESSION['RSVP']) && $_SESSION['RSVP']) {
 		unset($_SESSION['RSVP']);
-		echo "<script type='text/javascript'>alert('RSVP received!')</script>";
 	 } else if (isset($_SESSION['RSVP']) && !$_SESSION['RSVP']) {
 		echo "<script type='text/javascript'>alert('It seems something went wrong! Please contact the groom to check.')</script>";
 	 }
 ?>
 <body>
 <!-- Navigation menu bar including highlighting of active page and login/logout button depending on session status of user -->
+
 	<div id="menu">
 		<header>
-			<nav>
-				<ul>
-					<li <?php if($_SERVER['SCRIPT_NAME'] == "/index.php") {echo 'class="active"';}?>><a href="#home">Home</a></li>
-					<li <?php if($_SERVER['SCRIPT_NAME'] == "/about.php") {echo 'class="active"';}?>><a href="#about">About the wedding</a></li>
-					<li <?php if($_SERVER['SCRIPT_NAME'] == "/contact.php") {echo 'class="active"';}?>><a href="#contact">Contact</a></li>
-					<li <?php if($_SERVER['SCRIPT_NAME'] == "/rsvp.php") {echo 'class="active"';}?>><a href="#rsvp">RSVP</a></li>
-					<?php if($_SESSION['sid'] == session_id()){echo '<li><a href="logout.php">Log out</a></li>';}?>
-				</ul>
-			</nav>
+			<ul>
+				<li><a href="index_<?php echo $_SESSION["lang"]?>.php#home">Home</a></li>
+				<li><a href="index_<?php echo $_SESSION["lang"]?>.php#info">Info</a></li>
+				<li><a href="index_<?php echo $_SESSION["lang"]?>.php#contact">Contact</a></li>
+				<li><a href="index_<?php echo $_SESSION["lang"]?>.php#rsvp_form">RSVP</a></li>
+				<li><a href="logout.php">Log out</a></li>
+			</ul>
 		</header>
 	</div>
 <!-- End of header -->

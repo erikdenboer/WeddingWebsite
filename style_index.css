@@ -49,23 +49,23 @@ ul{
     background-color: rgba(255, 255, 255, 1);
 }
 
-#huntisover{
+#THIO{
     width: 40vw;
     position: fixed;
-    right: 55vw;
-    top: 50vh;
+    left: 55vw;
+    top: 20vh;
 }
 
 #logo{
-    width: 14vw;
+    width: 20vw;
     position: fixed;
-    left: 63vw;
-    top: 20vh;
+    right: 15vw;
+    top: 30vh;
 }
 
 #names{
     width: 30vw;
     position: fixed;
-    left: 55vw;
-    bottom: 24vh;
+    right: 10vw;
+    top: 50vh;
 }
