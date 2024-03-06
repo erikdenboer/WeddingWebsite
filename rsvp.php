@@ -25,13 +25,12 @@
                     <option value="0">Sorry, I/we can't make it... - Voor mij/ons lukt het helaas niet...</option>
                 </select>
             </div>
-            <div>
+            <div id="emaildiv">
                 <br>
                 <label for="email">Enter your email address if you want receive a copy/confirmation of this form:<br>
                 Voer hier je emailadres in als je een kopie/bevestiging van het ingevulde formulier wilt ontvangen:<br></label>
                 <input type="email" id="email" name="email" placeholder="zaneera.den@boer.nl">
                 <br><br>
-                <input type="submit">
             </div>
         </form>
     </div>

@@ -1,21 +1,10 @@
 <?php include('inc/header.php')?>
 
 <!--Main Content Start -->
-<main id="home">
+<main>
 <!--Home start-->
-    <div>
-        <div>
-            <img id="STD" src="images/homepage.jpg" alt="Foto van Z met haar prooi E">
-        </div>
-        <div>
-            <img id="THIO" src="images/huntisover_white.png" alt="The hunt is over!">
-        </div>
-        <div>
-            <img id="logo" src="images/logo-white.png" alt="Bruiloftslogo">
-        </div>
-        <div>
-            <img id="names" src="images/names_white.png" alt="Erik & Zaneera - 11.05.2024 - Leusden, NL">
-        </div>
+    <div id="home">
+        <img src="images/homepage.jpg" alt="Foto van Z met haar prooi E">
     </div>
 <!--Home end-->
 
@@ -33,7 +22,7 @@
         <p>De dresscode voor de bruiloft is formeel. Dat betekent dat we je graag in je beste outfit zien! Denk aan een mooie jurk voor de dames en een pantalon of een pak voor de heren.</p>
         
         <h3>Speeches</h3>
-        <p>Tijdens het diner is er gelegenheid voor speech. Ben je dit van plan, laat dit aan Astrid weten. Dan houdt zij een plekje voor je vrij in de planning.</p>
+        <p>Tijdens het diner is er gelegenheid voor speech. Ben je dit van plan, laat dit aan <a href=#contact>onze ceremoniemeester Astrid</a> weten. Dan houdt zij een plekje voor je vrij in de planning.</p>
 
         <h3>Unplugged wedding</h3>
         <p>Wij hebben een professionele fotograaf ingehuurd om alle bijzondere momenten van deze dag vast te leggen. 
@@ -41,12 +30,11 @@
 
         <h3>Cadeautip</h3>
         <p>Wij willen graag later dit jaar op huwelijksreis. Je maakt ons heel blij met een bijdrage om deze reis nog specialer te maken.</p>
-    </div>
-        
-    <div id='venue'>
+    
         <h1>Over de locatie</h1>
 
         <h3>Restaurant De Mof</h3>
+        <p>Arnhemseweg 95, 3832 GK Leusden</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.514704099919!2d5.412400776202065!3d52.1067631667427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c645065216741f%3A0x618b5b19dd95bbd7!2sRestaurant%20De%20Mof!5e0!3m2!1sen!2sde!4v1706651816697!5m2!1sen!2sde" 
             width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
@@ -66,9 +54,7 @@
                 <li>Er zijn ook meerdere kleine B&B's in de buurt, zoals bijvoorbeeld <a href="https://www.maarsbergseschuurtje.nl/">'t Maarsbergse Schuurtje'</a>.</li>
             </ul>
         </p>
-    </div>
-
-    <div id='planning'>
+    
         <h1>Planning</h1>
         <p>
         <!--Create table for the schedule: -->
@@ -84,6 +70,10 @@
                 <tr>
                     <td>14:00</td>
                     <td>Trouwceremonie</td>
+                </tr>
+                <tr>
+                    <td>18:00</td>
+                    <td>Aanvang 3-gangen-diner</td>
                 </tr>
                 <tr>
                     <td>23:00</td>
@@ -114,22 +104,22 @@
 <!--RSVP start -->
     <div id='rsvp_form'>
         <h1>RSVP</h1>
-        <p>Hallo gasten! Dit is de RSVP-pagina voor onze bruiloft. Hier kun je laten weten of je onze bruiloft mee komt vieren, met hoeveel je komt en wat je graag wil eten.</p>
+        <p>Dit is de RSVP-sectie voor onze bruiloft. Hier kun je laten weten of je onze bruiloft mee komt vieren, met hoeveel mensen je komt en wat je graag wil eten.</p>
         <form method="post" class="RSVPform" action="action_page.php">
         <!-- Create RSVP form -->
         <!-- Questions to ask: number of guests, name, food preference, info/comments, email for confirmation -->
             <div id="rsvp">
                 <label for="rsvp">Ben je erbij?</label><br>
                 <!-- Function didTheySayYes() triggers follow-up questions as needed -->
-                <input type="radio" name="rsvp" value="0" onchange=didTheySayYes(value) required>Voor mij/ons lukt het helaas niet...</input><br>
-                <input type="radio" name="rsvp" value="1" onchange=didTheySayYes(value) required>Ik ben/wij zijn van de partij!</input><br><br>
+                <label><input type="radio" name="rsvp" value="0" onchange=didTheySayYes(value) required>Voor mij/ons lukt het helaas niet...</input></label><br>
+                <label><input type="radio" name="rsvp" value="1" onchange=didTheySayYes(value) required>Ik ben/wij zijn van de partij!</input></label><br><br>
             </div>
             
             <div>
-                <br><!-- Disabling email functionality (hopefully temporarily)
+                <br>
                 <label for="email">Voer hier je emailadres in als je een kopie/bevestiging van het ingevulde formulier wilt ontvangen:<br></label>
                 <input type="email" id="email" name="email" placeholder="zaneera.den@boer.nl">
-                <br><br>-->
+                <br><br>
                 <input id="submit" type="submit">
             </div>
         </form>

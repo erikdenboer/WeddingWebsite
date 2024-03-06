@@ -1,8 +1,6 @@
 <?php 
 include('inc/header.php');
 
-echo '<div id=RSVP_confirm>';
-
 //Connect to MySQL database
 $server = 'localhost';
 $user = 'eandftug_DM';
@@ -76,43 +74,38 @@ for ($i = 0; $i < count($sql); $i++) {
 //Compilation of body for email is done in template file in inc directory
 //Note that confirmation email will still get sent to bride and groom as notification, even is $email is not entered by user
 
-/*if(isset($email)){
+if(isset($email)){
     echo 'Compiling email...<br>';    
 } else {
     echo 'Compiling notification email to hosts...<br>';
     $email = 'noreply@eandzgethitched.com';
-}*/
+}
 
 if($rsvp == 'Yes'){
     if($_SESSION["lang"] == "nl"){
         include('inc/RSVP_yes_nl.php');
-        echo $body;
-        //sendmail($email, $_POST['name1'], $body);
+        sendmail($email, $_POST['name1'], $body);
     } elseif($_SESSION["lang"] == "en"){
         include('inc/RSVP_yes_en.php');
-        echo $body;
-        //sendmail($email, $_POST['name1'], $body);
+        sendmail($email, $_POST['name1'], $body);
     }
 } elseif($rsvp == 'No') {
     if($_SESSION["lang"] == "nl"){
         include('inc/RSVP_no_nl.php');
-        echo $body;
-        //sendmail($email, $_POST['name1'], $body);
+        sendmail($email, $_POST['name1'], $body);
     } elseif($_SESSION["lang"] == "en"){
         include('inc/RSVP_no_en.php');
-        echo $body;
-        //sendmail($email, $_POST['name1'], $body);
+        sendmail($email, $_POST['name1'], $body);
     }
 }
 
 //Close database connection and return to main page
 mysqli_close($conn);
-/*if($_SESSION["lang"] == "dutch"){
+if($_SESSION["lang"] == "nl"){
     header("location:index_nl.php");
 } else {
     header("location:index_en.php");
-}*/
-echo '</div>';
+}
 
 include('inc/footer.php');?>
 <script src='inc/scripts_en.js'></script>

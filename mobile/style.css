@@ -71,7 +71,7 @@ ul{
 }
 
 #menu a{
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #f98d8a;
     border-radius: 5px;
     background-color: white;
@@ -94,48 +94,12 @@ ul{
     margin: auto;
 }
 
-#RSVP_confirm{
-    width: 80%;
-    margin: auto;
-    padding-top: 10%;
-}
-
 #submit{
     margin-bottom: 15%;
 }
 
-#home{
+#home img{
     max-width: 700px;
     width: 100%;
     margin: auto;
-}
-
-#STD{
-    max-width: 100%;
-    margin: 0;
-    z-index: 0;
-}
-
-#THIO{
-    width: 50vw;
-    position: absolute;
-    top: 5vh;
-    right: 0;
-    z-index: 1;
-}
-
-#logo{
-    width: 30vw;
-    z-index: 1;
-    position: absolute;
-    top: 10vh;
-    right: 0;
-}
-
-#names{
-    width: 35vw;
-    z-index: 1;
-    position: absolute;
-    top: 22vh;
-    right: 0;
 }

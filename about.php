@@ -16,16 +16,14 @@
         <p>The dresscode for our wedding is formal. This is an invitation for you to dress up! So think dresses for the women and a suit or nice trousers and a jacket for the men.</p>
         
         <h3>Speeches</h3>
-        <p>Would you like to give a speech? We would love that! Please let Astrid know, she will reserve a moment for you in the planning of the day.</p>
+        <p>Would you like to give a speech? We would love that! Please let <a href=contact.php>Astrid, our Master of Ceremonies</a>, know, then she will reserve a moment for you in the planning of the day.</p>
 
         <h3>Unplugged wedding</h3>
         <p>We've hired a professional photographer to capture all special moments of this day. We would like you to enjoy it all, 
             so we ask you to keep your phone put away as much as possible during the whole day.</p>
 
         <h3>Gift tip</h3>
-        <p>We would love to go on a honeymoon later this year. You would make us very happy with a contribution to make this trip even more special.</p>
-        
-        <h1>About the location</h1>
+        <p>We would love to go on a honeymoon later this year. You would make us very happy with a contribution to make this trip even more special.</p>        
     </div>
     
     <div class='nl'> <!-- Dutch language content -->
@@ -41,7 +39,7 @@
         <p>De dresscode voor de bruiloft is formeel. Dat betekent dat we je graag in je beste outfit zien! Denk aan een mooie jurk voor de dames en een pantalon of een pak voor de heren.</p>
         
         <h3>Speeches</h3>
-        <p>Tijdens het diner is er gelegenheid voor speech. Ben je dit van plan, laat dit aan Astrid weten. Dan houdt zij een plekje voor je vrij in de planning.</p>
+        <p>Tijdens het diner is er gelegenheid voor speech. Ben je dit van plan, laat dit aan <a href=contact.php>onze ceremoniemeester Astrid</a> weten. Dan houdt zij een plekje voor je vrij in de planning.</p>
 
         <h3>Unplugged wedding</h3>
         <p>Wij hebben een professionele fotograaf ingehuurd om alle bijzondere momenten van deze dag vast te leggen. 
@@ -49,8 +47,11 @@
 
         <h3>Cadeautip</h3>
         <p>Wij willen graag later dit jaar op huwelijksreis. Je maakt ons heel blij met een bijdrage om deze reis nog specialer te maken.</p>
-        
-        <h1>Over de locatie</h1>
+    </div>
+
+    <div class='universal'>
+        <h1 class='en'>About the location</h1>
+        <h1 class='nl'>Over de locatie</h1>
     </div>
 
     <div class='universal'> <!-- Content for both languages -->
@@ -79,29 +80,7 @@
                 <li>There are also several small, mostly family-run B&B's in rural settings nearby, such as 
                 <a href="https://www.maarsbergseschuurtje.nl/">'t Maarsbergse Schuurtje'</a>.</li>
             </ul>
-            Unable to find something you like? Contact the groom, or just call Restaurant De Mof - they certainly know which places close by are worth checking out!</p>
-
-        <h1>About the schedule</h1>
-        <p>
-        <!--Create table for the schedule: -->
-            <table>
-                <tr>
-                    <th>Time</th>
-                    <th>Activity</th>
-                </tr>
-                <tr>
-                    <td>13:00</td>
-                    <td>Reception of guests</td>
-                </tr>
-                <tr>
-                    <td>14:00</td>
-                    <td>Wedding ceremony</td>
-                </tr>
-                <tr>
-                    <td>23:00</td>
-                    <td>Estimated end of day</td>
-                </tr>
-            </table>
+            Unable to find something you like? Contact the groom, or just call Restaurant De Mof - they certainly know which places close by are worth checking out!
         </p>
     </div>
     
@@ -122,8 +101,38 @@
                 <li>Er zijn ook meerdere kleine B&B's in de buurt, zoals bijvoorbeeld <a href="https://www.maarsbergseschuurtje.nl/">'t Maarsbergse Schuurtje'</a>.</li>
             </ul>
         </p>
+    </div>
 
-        <h1>Over de planning</h1>
+    <div class='universal'>
+        <h1 class='en'>About the schedule</h1>
+        <h1 class='nl'>Over de planning</h1>
+    </div>
+
+    <div class='en'>
+        <p>
+        <!--Create table for the schedule: -->
+            <table id='tab_en'>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                </tr>
+                <tr>
+                    <td>13:00</td>
+                    <td>Reception of guests</td>
+                </tr>
+                <tr>
+                    <td>14:00</td>
+                    <td>Wedding ceremony</td>
+                </tr>
+                <tr>
+                    <td>23:00</td>
+                    <td>Estimated end of day</td>
+                </tr>
+            </table>
+        </p>
+    </div>
+        
+    <div class='nl'>
         <p>
         <!--Create table for the schedule: -->
             <table>

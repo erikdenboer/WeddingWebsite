@@ -1,8 +1,8 @@
 html{
     margin: 0;
     color: black;
-    background: white url(images/SaveTheDate.jpg) no-repeat fixed center;
-    background-size: cover;
+    background: white url(images/homepage.jpg) no-repeat fixed center;
+    background-size: contain;
 }
 
 body{
@@ -22,6 +22,17 @@ ul{
     list-style-type: none;
 }
 
+#copyright{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    color: #f98d8a;
+    padding: 1%;
+    border-left: 1px solid #f98d8a;
+    border-top: 1px solid #f98d8a;
+    background-color: rgba(255, 255, 255, 1);
+}
+
 #menu li{
     display: inline;
 }
@@ -36,36 +47,4 @@ ul{
 #menu a:hover{
     background-color: #f98d8a;
     color: white;
-}
-
-#copyright{
-    position: fixed;
-    right: 0px;
-    bottom: 0px;
-    color: #f98d8a;
-    padding: 1%;
-    border-left: 1px solid #f98d8a;
-    border-top: 1px solid #f98d8a;
-    background-color: rgba(255, 255, 255, 1);
-}
-
-#THIO{
-    width: 40vw;
-    position: fixed;
-    left: 55vw;
-    top: 20vh;
-}
-
-#logo{
-    width: 20vw;
-    position: fixed;
-    right: 15vw;
-    top: 30vh;
-}
-
-#names{
-    width: 30vw;
-    position: fixed;
-    right: 10vw;
-    top: 50vh;
 }

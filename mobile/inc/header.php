@@ -10,13 +10,7 @@
     <meta charset="utf-8">
     <title><?php echo $title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php 
-	if($_SERVER['SCRIPT_NAME'] == "/index.php") {
-		echo '<link rel="stylesheet" href="style_rsvp.css">';
-	} else{
-		echo '<link rel="stylesheet" href="style.css">';
-	}
-	?>
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="<?php echo $site_icon; ?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo $site_icon; ?>">
 </head>
@@ -47,6 +41,7 @@
 	//Check whether RSVP form has just been posted successfully
 	if (isset($_SESSION['RSVP']) && $_SESSION['RSVP']) {
 		unset($_SESSION['RSVP']);
+		echo "<script type='text/javascript'>alert('RSVP received!')</script>";
 	 } else if (isset($_SESSION['RSVP']) && !$_SESSION['RSVP']) {
 		echo "<script type='text/javascript'>alert('It seems something went wrong! Please contact the groom to check.')</script>";
 	 }

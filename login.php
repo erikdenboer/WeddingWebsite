@@ -10,7 +10,7 @@ Password-only login field -->
     
 
         <!-- Toggle password visibility -->
-        <input type="checkbox" onclick="showpass()">Show password/Toon wachtwoord<br><br>
+        <input type="checkbox" onclick="showpass()">Show/Weergeven<br><br>
         <input type="submit" value="Log in">
     </form>
 </div>

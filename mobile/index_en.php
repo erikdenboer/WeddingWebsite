@@ -1,21 +1,10 @@
 <?php include('inc/header.php')?>
 
 <!--Main Content Start -->
-<main id="home">
+<main>
 <!--Home start-->
-    <div>
-        <div>
-            <img id="STD" src="images/homepage.jpg" alt="Photo of Z after catching E">
-        </div>
-        <div>
-            <img id="THIO" src="images/huntisover_white.png" alt="The hunt is over!">
-        </div>
-        <div>
-            <img id="logo" src="images/logo-white.png" alt="Wedding logo">
-        </div>
-        <div>
-            <img id="names" src="images/names_white.png" alt="Erik & Zaneera - 11.05.2024 - Leusden, NL">
-        </div>
+    <div id="home">
+        <img src="images/homepage.jpg" alt="Photo of Z after catching E">
     </div>
 <!--Home end-->
 
@@ -34,7 +23,7 @@
         <p>The dresscode for our wedding is formal. This is an invitation for you to dress up! So think dresses for the women and a suit or nice trousers and a jacket for the men.</p>
         
         <h3>Speeches</h3>
-        <p>Would you like to give a speech? We would love that! Please let Astrid know, she will reserve a moment for you in the planning of the day.</p>
+        <p>Would you like to give a speech? We would love that! Please let <a href=#contact>Astrid, our Master of Ceremonies</a>, know, then she will reserve a moment for you in the planning of the day.</p>
 
         <h3>Unplugged wedding</h3>
         <p>We've hired a professional photographer to capture all special moments of this day. We would like you to enjoy it all, 
@@ -45,6 +34,7 @@
         
         <h1>Venue</h1>
         <h3>Restaurant De Mof</h3>
+        <p>Arnhemseweg 95, 3832 GK Leusden, the Netherlands</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.514704099919!2d5.412400776202065!3d52.1067631667427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c645065216741f%3A0x618b5b19dd95bbd7!2sRestaurant%20De%20Mof!5e0!3m2!1sen!2sde!4v1706651816697!5m2!1sen!2sde" 
             max-width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             
@@ -86,6 +76,10 @@
                     <td>Wedding ceremony</td>
                 </tr>
                 <tr>
+                    <td>18:00</td>
+                    <td>Start of 3-course dinner</td>
+                </tr>
+                <tr>
                     <td>23:00</td>
                     <td>Estimated end of day</td>
                 </tr>
@@ -114,8 +108,7 @@
 <!--RSVP start -->
     <div id='rsvp_form'>
         <h1>RSVP</h1>
-        <p>Hello guests! This is the RSVP page for our wedding. 
-            Here, you can let us know whether you'll be there to celebrate with us, how many guests you'll bring and what you'd like for dinner.
+        <p>This is our RSVP form. Here, you can let us know whether you'll be there to celebrate with us, how many guests you'll bring and what you'd like for dinner.
         </p>
         <form method="post" class="RSVPform" action="action_page.php">
         <!-- Create RSVP form -->
@@ -123,15 +116,15 @@
             <div id="rsvp">
                 <label for="rsvp">Will you be joining us?</label><br>
                 <!-- Function didTheySayYes() triggers follow-up questions as needed -->
-                <input type="radio" name="rsvp" value="0" onchange=didTheySayYes(value) required>Sorry, I/we can't make it...</input><br>
-                <input type="radio" name="rsvp" value="1" onchange=didTheySayYes(value) required>Yes, I/we will be there!</input><br><br>
+                <label><input type="radio" name="rsvp" value="0" onchange=didTheySayYes(value) required>Sorry, I/we can't make it...</input></label><br>
+                <label><input type="radio" name="rsvp" value="1" onchange=didTheySayYes(value) required>Yes, I/we will be there!</input></label><br><br>
             </div>
             
             <div>
-                <br><!-- Disabling email functionality (hopefully temporarily)
+                <br>
                 <label for="email">Enter your email address if you want receive a copy/confirmation of this form:<br></label>
                 <input type="email" id="email" name="email" placeholder="zaneera.den@boer.nl">
-                <br><br>-->
+                <br><br>
                 <input id="submit" type="submit">
             </div>
         </form>

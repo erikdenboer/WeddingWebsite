@@ -2,6 +2,7 @@
 
 <?php require_once('variables.php');
 	  require_once('functions.php');
+
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -44,7 +45,7 @@
 		<header>
 			<ul>
 				<li <?php if($_SERVER['SCRIPT_NAME'] == "/index.php") {echo 'class="active"';}?>><a href="index.php">Home</a></li>
-				<li <?php if($_SERVER['SCRIPT_NAME'] == "/about.php") {echo 'class="active"';}?>><a href="about.php">About the wedding</a></li>
+				<li <?php if($_SERVER['SCRIPT_NAME'] == "/about.php") {echo 'class="active"';}?>><a href="about.php">Info</a></li>
 				<li <?php if($_SERVER['SCRIPT_NAME'] == "/contact.php") {echo 'class="active"';}?>><a href="contact.php">Contact</a></li>
 				<li <?php if($_SERVER['SCRIPT_NAME'] == "/rsvp.php") {echo 'class="active"';}?>><a href="rsvp.php">RSVP</a></li>
 				<?php if($_SESSION['sid'] == session_id()){echo '<li><a href="logout.php">Log out</a></li>';}?>

@@ -5,7 +5,7 @@ $body1 =   '<table><tr><td>
             <img style="margin: auto; max-width: 100%;" src="https://www.eandzgethitched.com/images/logo-colored-pink.png" alt="Wedding logo" width="640" />
             </td></tr></table>
             <h1>Your RSVP to E&Z\'s wedding!</h1>
-            <p style="margin: auto;">Hello ' . $_POST['name1'] . ", <br>
+            <p style="margin: auto;">Hallo ' . $_POST['name1'] . ", <br>
             We kijken ernaar uit je te zien op onze bruiloft! Hierbij de bevestiging van wat je aangegeven hebt:<br>";
 
 //Generate user-friendly list of their responses

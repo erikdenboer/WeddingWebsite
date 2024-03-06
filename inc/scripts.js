@@ -23,26 +23,23 @@ function didTheySayYes() {
     cleanup = document.getElementsByClassName('RSVPquestion');
     while (cleanup.length > 0) {cleanup[0].parentNode.removeChild(cleanup[0]);}
     let x = document.getElementById('rsvp').value;                                  //Extract answer value
-    const nodeMap = document.getElementById('rsvp').attributes;                                  //Extract answer value
-    let text = "";
-    for (let i = 0; i < nodeMap.length; i++) {
-        text += nodeMap[i].name + " = " + nodeMap[i].value + "<br>";
-    }
-    alert(text);
     if (x == 'null') {                                                              //Don't respond to empty option
         return
     }
-    switch (Number(x)) {
-    case 0:                                                                         //Response to 'not joining'
+    if(x == 0){                                                                     //Response to 'not joining'
         let name1 = document.createElement('div');
         name1.id = 'rsvp_no';
         name1.className = 'RSVPyesorno';
         document.getElementById('rsvp').insertAdjacentElement('afterend', name1);
-        name1.innerHTML = `We're sorry you won't be there!<br>Heel jammer dat we je/jullie zullen moeten missen!
+        name1.innerHTML = `<br>We're sorry you won't be there!<br>Heel jammer dat we je/jullie zullen moeten missen!<br>
         <br><label for="name1">Name/Naam:<br></label>
         <input type="text" id="name1" name="name1" placeholder="Zaneera den Boer" required>`;
-        break;
-    case 1:                                                                         //Response to 'will join'
+        let submit = document.createElement('div');
+        submit.id = 'submit';
+        submit.className = 'RSVPyesorno';
+        document.getElementById('emaildiv').insertAdjacentElement('afterend', submit);
+        submit.innerHTML = '<input type="submit">';
+    }else if(x == 1){                                                               //Response to 'will join'
         let some = document.createElement('div');
         some.className = 'RSVPyesorno';
         document.getElementById('rsvp').insertAdjacentElement('afterend', some);
@@ -53,12 +50,10 @@ function didTheySayYes() {
                             <option value="gs2">2</option>
                             <option value="gs3">3</option>
                             <option value="gs4">4 or more</option>
-                        </select>`;                        
-        break;
-    default:
+                        </select>`;
+    } else {
         alert('Error! Please refresh the page and try again, and if you keep having issues, contact the groom. \n' + 
         'Sorry, er is iets fout gegaan! Probeer het nog eens of neem anders contact op met de bruidegom.');
-        break;
     }
 }
 
@@ -129,6 +124,11 @@ function RSVPsize() {
             `<br><textarea name="message" id="message" cols=50 rows=6 
             placeholder="Please let us know if you have any allergy info or other dietary requests and we'll do our best to accommodate you! \n` +
             `Laat ons hier weten of je allergieën hebt of andere dieetwensen, dan doen we onze best om hiermee rekening te houden!"></textarea>`;
+            let submit = document.createElement('div');
+            submit.id = 'submit';
+            submit.className = 'RSVPyesorno';
+            document.getElementById('emaildiv').insertAdjacentElement('afterend', submit);
+            submit.innerHTML = '<input type="submit">';
         break;
         case 4:
             alert("We're not expecting anyone to bring this many guests. Either correct your entry if you miss-clicked, or please check with the bride/groom that we have enough space. \n" +

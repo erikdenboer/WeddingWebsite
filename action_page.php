@@ -10,7 +10,7 @@ $conn = mysqli_connect($server, $user, $pw, $db);
 if (!$conn)  {
     die('Connection Failed: ' . mysqli_connect_error());
 }
-echo 'Connected successfully!<br><br>';
+//echo 'Connected successfully!<br><br>';
 
 //Set session variable to indicate that RSVP form has been submitted (used to trigger confirmation for user)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -25,7 +25,12 @@ if ($rsvp == 1){                //Set RSVP to yes/no instead of binary before se
     $rsvp = 'No';
 }
 //Gather replies. Only gather optional variables if they were actually set
-$names = array(mysqli_real_escape_string($conn, $_POST['name1']));
+if(isset($_POST['name1'])){
+    $names = array(mysqli_real_escape_string($conn, $_POST['name1']));
+} else{
+    echo "<script type='text/javascript'>alert('It seems something went wrong! Please contact the groom to check.')</script>";
+    echo "Please return to the RSVP page and try again. Don't forget to enter your name!";
+}
 $food = array(mysqli_real_escape_string($conn, $_POST['food1']));
 if ($_POST['name2'] && $_POST['food2']) {
 	$names[1] = mysqli_real_escape_string($conn, $_POST['name2']);
@@ -67,11 +72,11 @@ for ($i = 0; $i < count($sql); $i++) {
     //echo 'Preparing email...';
     if($_POST['rsvp']){
         include('inc/RSVP_yes.php');
-        sendmail_yes($email, $_POST['name1'], $body);
+        sendmail($email, $_POST['name1'], $body);
     }
     else {
         include('inc/RSVP_no.php'); 
-        sendmail_no($email, $_POST['name1'], $body);
+        sendmail($email, $_POST['name1'], $body);
     }
 //}
 

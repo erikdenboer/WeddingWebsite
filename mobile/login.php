@@ -14,9 +14,9 @@ Password-only login field -->
 
         <label for="lang">Select language/Kies taal:</label><br>
         <input type="radio" id="english" name="lang" value="en">
-        <label for="english"><img src="https://www.eandzgethitched.com/images/USflag.png" style="width:20px;" alt="USflag">English</label><br>
+        <label for="english"><img src="/images/USflag.png" style="width:20px;" alt="USflag">English</label><br>
         <input type="radio" id="dutch" name="lang" value="nl">
-        <label for="dutch"><img src="https://www.eandzgethitched.com/images/NLflag.png" style="width:20px;" alt="NLflag">Nederlands</label><br>
+        <label for="dutch"><img src="/images/NLflag.png" style="width:20px;" alt="NLflag">Nederlands</label><br>
         <input type="submit" value="Log in">
     </form>
 </div>
